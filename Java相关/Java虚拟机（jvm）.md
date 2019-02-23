@@ -11,6 +11,12 @@ Java面试通关手册（Java学习指南）github地址（欢迎star和pull）�
 
 1. 介绍下Java内存区域（运行时数据区）。
 
+- [运行时栈帧结构](https://blog.csdn.net/qian520ao/article/details/79118474)
+     - 局部变量表
+     - 操作数栈
+     - 动态链接
+     - 返回地址
+
 2. 对象的访问定位的两种方式。
 
 
