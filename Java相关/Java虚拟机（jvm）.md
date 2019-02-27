@@ -18,6 +18,8 @@ Java面试通关手册（Java学习指南）github地址（欢迎star和pull）�
      - 返回地址
 
 2. 对象的访问定位的两种方式。
+     - 句柄方式，开辟句柄池，增加一层引用
+     - 直接引用方式
 
 
 [深入理解虚拟机之垃圾回收](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4NDQ4MzU5OA%3D%3D%26mid%3D2247483914%26idx%3D1%26sn%3D9aa157d4a1570962c39783cdeec7e539%26chksm%3Dfd98546bcaefdd7d9f61cd356e5584e56b64e234c3a403ed93cb6d4dde07a505e3000fd0c427%23rd)
@@ -25,7 +27,12 @@ Java面试通关手册（Java学习指南）github地址（欢迎star和pull）�
 1. 如何判断对象是否死亡（两种方法）。
 
 2. 简单的介绍一下强引用、软引用、弱引用、虚引用（虚引用与软引用和弱引用的区别、使用软引用能带来的好处）。
-
+>为何需要这么多的引用类型？为了更好的进行内存管理而设置的一套机制，粗俗的说就是不同的引用垃圾回收的力度不同。
+     - 从垃圾收集器收集的条件和什么时候会回收，作用范围，来答即可
+     - 强引用，就是指在程序代码之中普遍存在的，类似“Object obj = new Object()”这类的引用，只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。（普遍存在的，只要存在，永远不会被垃圾收器）
+     - 软引用，用来描述一些还用但并非必须的对象。在系统将要发生内存溢出异常之前，将会把这些对象列进回收范围之中进行第二次回收。只有在内存不足的时候JVM才会回收该对象
+     [强引用，软引用，弱引用，虚引用有什么用？(https://www.zhihu.com/question/37401125)
+     
 3. 垃圾收集有哪些算法，各自的特点？
 
 4. HotSpot为什么要分为新生代和老年代？
@@ -49,7 +56,7 @@ Java面试通关手册（Java学习指南）github地址（欢迎star和pull）�
 [深入理解虚拟机之虚拟机类加载机制](http://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247483934&idx=1&sn=f247f9bee4e240f5e7fac25659da3bff&chksm=fd98547fcaefdd6996e1a7046e03f29df9308bdf82ceeffd111112766ffd3187892700f64b40#rd)
 
 1. 简单说说类加载过程，里面执行了哪些操作？
-
+     - [深入理解Java类加载器(ClassLoader)](https://blog.csdn.net/javazejian/article/details/73413292)
 2. 对类加载器有了解吗？
 
 3. 什么是双亲委派模型？
